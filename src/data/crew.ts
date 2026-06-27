@@ -84,7 +84,7 @@ export const crewMembers: CrewMember[] = [
   {
     id: '9',
     name: 'VihaanVP',
-    rank: 'admin',
+    rank: 'officer',
     role: 'Developer',
     bounty: '67M',
     fruit: 'Kitsune',
