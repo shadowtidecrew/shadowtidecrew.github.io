@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "type nul > dist\\.nojekyll",
     "lint": "eslint .",
+    "prepare": "node -e \"var fs=require('fs'); if(!fs.existsSync('src/data/config.json')) fs.copyFileSync('src/data/config.json.example', 'src/data/config.json')\"",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.app.json"
   },

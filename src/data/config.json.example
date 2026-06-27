@@ -1,5 +1,5 @@
 {
-    discord: {
-        "webhookUrl": "url-goes-here"
-    }
+  "discord": {
+    "webhookUrl": "https://discord.com/api/webhooks/your-webhook-id/your-webhook-token"
+  }
 }
