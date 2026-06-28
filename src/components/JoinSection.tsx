@@ -114,6 +114,9 @@ export default function JoinSection() {
                 <MessageSquare className="w-5 h-5" />
                 Join Our Discord
               </a>
+              <p className="text-ocean-400 text-sm mb-6">
+                If the Discord Server isn't joined within 24 Hours, then the application will automatically be rejected.
+              </p>
               <div>
                 <button
                   onClick={() => setStatus('idle')}
