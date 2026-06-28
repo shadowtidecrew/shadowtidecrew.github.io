@@ -38,7 +38,7 @@ export default function Footer() {
           <div className="w-full h-px bg-gradient-to-r from-transparent via-ocean-500/30 to-transparent mb-6" />
 
           <p className="text-ocean-500 text-sm flex items-center gap-1">
-            Made with <Heart className="w-3 h-3 text-red-400 fill-red-400" /> for the Blox Fruits community
+            Made with <Heart className="w-3 h-3 text-red-400 fill-red-400" /> by Aryan and VihaanVP
           </p>
           <p className="text-ocean-600 text-xs mt-2">
             Shadow Tide Crew — Est. 2022
