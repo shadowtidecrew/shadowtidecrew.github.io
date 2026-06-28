@@ -114,17 +114,9 @@ export default function JoinSection() {
                 <MessageSquare className="w-5 h-5" />
                 Join Our Discord
               </a>
-              <p className="text-ocean-400 text-sm mb-6">
+              <p className="text-ocean-400 text-sm">
                 If the Discord Server isn't joined within 24 Hours, then the application will automatically be rejected.
               </p>
-              <div>
-                <button
-                  onClick={() => setStatus('idle')}
-                  className="px-6 py-3 bg-ocean-500 hover:bg-ocean-400 text-white rounded-lg font-medium transition-colors"
-                >
-                  Submit Another
-                </button>
-              </div>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
