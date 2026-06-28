@@ -103,14 +103,25 @@ export default function JoinSection() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-3">Application Submitted!</h3>
               <p className="text-ocean-200 mb-6">
-                Our officers will review your application. Expect a response within 24-48 hours.
+                Your application has been submitted successfully! For more updates on the results, please join the following Discord Server.
               </p>
-              <button
-                onClick={() => setStatus('idle')}
-                className="px-6 py-3 bg-ocean-500 hover:bg-ocean-400 text-white rounded-lg font-medium transition-colors"
+              <a
+                href="https://discord.gg/Xd2Cmj28j5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#5865F2]/20 hover:bg-[#5865F2]/40 border border-[#5865F2]/30 hover:border-[#5865F2]/60 text-white rounded-xl font-medium transition-all mb-6"
               >
-                Submit Another
-              </button>
+                <MessageSquare className="w-5 h-5" />
+                Join Our Discord
+              </a>
+              <div>
+                <button
+                  onClick={() => setStatus('idle')}
+                  className="px-6 py-3 bg-ocean-500 hover:bg-ocean-400 text-white rounded-lg font-medium transition-colors"
+                >
+                  Submit Another
+                </button>
+              </div>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -213,18 +224,6 @@ export default function JoinSection() {
                 {status === 'submitting' ? 'Submitting...' : 'Submit Application'}
               </button>
 
-              <div className="text-center">
-                <p className="text-white/50 text-sm mb-3">Or reach us directly</p>
-                <a
-                  href="https://discord.gg/Xd2Cmj28j5"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#5865F2]/20 hover:bg-[#5865F2]/40 border border-[#5865F2]/30 hover:border-[#5865F2]/60 text-white rounded-xl font-medium transition-all"
-                >
-                  <MessageSquare className="w-5 h-5" />
-                  Join Our Discord
-                </a>
-              </div>
             </form>
           )}
         </div>
