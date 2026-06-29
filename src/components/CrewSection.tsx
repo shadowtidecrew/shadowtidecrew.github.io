@@ -78,8 +78,8 @@ export default function CrewSection() {
                       <RankIcon className="w-5 h-5 text-white" />
                     </div>
                     <span className={`text-xs font-medium px-2 py-1 rounded-full ${
-                      member.status === 'legendary' ? 'bg-amber-500/20 text-amber-400' :
-                      member.status === 'active' ? 'bg-ocean-500/20 text-ocean-400' :
+                      member.status === 'high' ? 'bg-amber-500/20 text-amber-400' :
+                      member.status === 'balanced' ? 'bg-ocean-500/20 text-ocean-400' :
                       'bg-tide-500/20 text-tide-400'
                     }`}>
                       {member.status.charAt(0).toUpperCase() + member.status.slice(1)}
