@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Crown, Shield, User, Star, Zap, Flame, Gem, Search, Filter } from 'lucide-react';
+import { Crown, Shield, Star, Zap, Flame, Gem, Search, Filter } from 'lucide-react';
 import { crewMembers as staticCrewMembers } from '../data/crew';
 
 const rankConfig = {
