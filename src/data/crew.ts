@@ -5,7 +5,7 @@ export interface CrewMember {
   role: string;
   bounty: string;
   fruit: string;
-  status: 'legendary' | 'active' | 'rising';
+  status: 'high' | 'balanced' | 'low';
 }
 
 export const crewMembers: CrewMember[] = [
@@ -16,7 +16,7 @@ export const crewMembers: CrewMember[] = [
     role: 'Crew Leader & Founder',
     bounty: '30M',
     fruit: 'Dark-Dark',
-    status: 'legendary',
+    status: 'high',
   },
   {
     id: '2',
@@ -25,7 +25,7 @@ export const crewMembers: CrewMember[] = [
     role: 'PvP Commander',
     bounty: '25M',
     fruit: 'Light-Light',
-    status: 'legendary',
+    status: 'high',
   },
   {
     id: '3',
@@ -34,7 +34,7 @@ export const crewMembers: CrewMember[] = [
     role: 'Raid Coordinator',
     bounty: '22M',
     fruit: 'Magma',
-    status: 'legendary',
+    status: 'high',
   },
   {
     id: '4',
@@ -43,7 +43,7 @@ export const crewMembers: CrewMember[] = [
     role: 'Sea Event Specialist',
     bounty: '18M',
     fruit: 'Dough',
-    status: 'active',
+    status: 'balanced',
   },
   {
     id: '5',
@@ -52,7 +52,7 @@ export const crewMembers: CrewMember[] = [
     role: 'Bounty Hunter',
     bounty: '15M',
     fruit: 'Venom',
-    status: 'active',
+    status: 'balanced',
   },
   {
     id: '6',
@@ -61,7 +61,7 @@ export const crewMembers: CrewMember[] = [
     role: 'Support & Healer',
     bounty: '12M',
     fruit: 'Flame',
-    status: 'active',
+    status: 'balanced',
   },
   {
     id: '7',
@@ -70,7 +70,7 @@ export const crewMembers: CrewMember[] = [
     role: 'Grinder',
     bounty: '5M',
     fruit: 'Ice',
-    status: 'rising',
+    status: 'low',
   },
   {
     id: '8',
@@ -79,6 +79,6 @@ export const crewMembers: CrewMember[] = [
     role: 'Trainee',
     bounty: '3M',
     fruit: 'Bomb',
-    status: 'rising',
+    status: 'low',
   },
 ];
