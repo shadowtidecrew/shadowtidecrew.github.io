@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import { Crown, Shield, User, Star, Zap, Search, Filter } from 'lucide-react';
+import { Crown, Shield, User, Star, Zap, Flame, Gem, Search, Filter } from 'lucide-react';
 import { crewMembers as staticCrewMembers } from '../data/crew';
 
 const rankConfig = {
   teamZ: { icon: Crown, label: 'Team Z', color: 'bg-amber-500' },
   teamU: { icon: Shield, label: 'Team U', color: 'bg-ocean-500' },
   teamY: { icon: Zap, label: 'Team Y', color: 'bg-tide-500' },
-  teamX: { icon: User, label: 'Team X', color: 'bg-purple-500' },
-  teamS: { icon: Star, label: 'Team S', color: 'bg-pink-500' },
+  teamX: { icon: Flame, label: 'Team X', color: 'bg-purple-500' },
+  teamS: { icon: Gem, label: 'Team S', color: 'bg-pink-500' },
   teamA: { icon: Star, label: 'Team A', color: 'bg-gray-500' },
 };
 
