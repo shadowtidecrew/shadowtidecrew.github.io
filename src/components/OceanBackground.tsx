@@ -44,15 +44,15 @@ export default function OceanBackground() {
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw gradient
+      // Draw gradient with purple theme
       const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
       gradient.addColorStop(0, '#020617');
-      gradient.addColorStop(0.4, '#082f49');
-      gradient.addColorStop(1, '#0c4a6e');
+      gradient.addColorStop(0.4, '#2e1065');
+      gradient.addColorStop(1, '#3f0f5c');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Draw particles
+      // Draw particles with purple glow
       particles.forEach((p) => {
         p.y += p.speedY;
         p.x += p.speedX;
@@ -64,7 +64,7 @@ export default function OceanBackground() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(14, 165, 233, ${p.opacity})`;
+        ctx.fillStyle = `rgba(147, 51, 234, ${p.opacity})`;
         ctx.fill();
       });
 
