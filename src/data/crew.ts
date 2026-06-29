@@ -1,7 +1,7 @@
 export interface CrewMember {
   id: string;
   name: string;
-  rank: 'Team Z' | 'Team U' | 'Team Y' | 'Team X';
+  rank: 'Team Z' | 'Team U' | 'Team Y' | 'Team X' | 'Team S' | 'Team A';
   role: string;
   bounty: string;
   fruit: string;
