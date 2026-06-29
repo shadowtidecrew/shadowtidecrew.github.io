@@ -1,7 +1,7 @@
 export interface CrewMember {
   id: string;
   name: string;
-  rank: 'Team Z' | 'Team U' | 'Team Y' | 'Team X' | 'Team S' | 'Team A';
+  rank: 'leader' | 'officer' | 'member' | 'recruit';
   role: string;
   bounty: string;
   fruit: string;
@@ -12,7 +12,7 @@ export const crewMembers: CrewMember[] = [
   {
     id: '1',
     name: 'CaptainShadow',
-    rank: 'Team Z',
+    rank: 'leader',
     role: 'Crew Leader & Founder',
     bounty: '30M',
     fruit: 'Dark-Dark',
@@ -21,7 +21,7 @@ export const crewMembers: CrewMember[] = [
   {
     id: '2',
     name: 'TideHunter',
-    rank: 'Team U',
+    rank: 'officer',
     role: 'PvP Commander',
     bounty: '25M',
     fruit: 'Light-Light',
@@ -30,7 +30,7 @@ export const crewMembers: CrewMember[] = [
   {
     id: '3',
     name: 'WaveBreaker',
-    rank: 'Team U',
+    rank: 'officer',
     role: 'Raid Coordinator',
     bounty: '22M',
     fruit: 'Magma',
@@ -39,7 +39,7 @@ export const crewMembers: CrewMember[] = [
   {
     id: '4',
     name: 'StormRider',
-    rank: 'Team Y',
+    rank: 'member',
     role: 'Sea Event Specialist',
     bounty: '18M',
     fruit: 'Dough',
@@ -48,7 +48,7 @@ export const crewMembers: CrewMember[] = [
   {
     id: '5',
     name: 'AbyssWalker',
-    rank: 'Team Y',
+    rank: 'member',
     role: 'Bounty Hunter',
     bounty: '15M',
     fruit: 'Venom',
@@ -57,7 +57,7 @@ export const crewMembers: CrewMember[] = [
   {
     id: '6',
     name: 'CurrentSurfer',
-    rank: 'Team X',
+    rank: 'member',
     role: 'Support & Healer',
     bounty: '12M',
     fruit: 'Flame',
@@ -66,7 +66,7 @@ export const crewMembers: CrewMember[] = [
   {
     id: '7',
     name: 'DepthDiver',
-    rank: 'Team X',
+    rank: 'recruit',
     role: 'Grinder',
     bounty: '5M',
     fruit: 'Ice',
@@ -75,10 +75,19 @@ export const crewMembers: CrewMember[] = [
   {
     id: '8',
     name: 'FoamBurst',
-    rank: 'Team X',
+    rank: 'recruit',
     role: 'Trainee',
     bounty: '3M',
     fruit: 'Bomb',
     status: 'rising',
+  },
+  {
+    id: '9',
+    name: 'VihaanVP',
+    rank: 'officer',
+    role: 'Developer',
+    bounty: '67M',
+    fruit: 'Kitsune',
+    status: 'legendary',
   },
 ];
