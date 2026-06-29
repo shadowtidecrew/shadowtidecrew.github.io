@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import { Crown, Shield, User, Star, Search, Filter } from 'lucide-react';
+import { Crown, Shield, User, Star, Zap, Search, Filter } from 'lucide-react';
 import { crewMembers as staticCrewMembers } from '../data/crew';
 
 const rankConfig = {
-  leader: { icon: Crown, label: 'Leader', color: 'bg-amber-500' },
-  officer: { icon: Shield, label: 'Officer', color: 'bg-ocean-500' },
-  member: { icon: User, label: 'Member', color: 'bg-tide-500' },
-  recruit: { icon: Star, label: 'Recruit', color: 'bg-gray-500' },
+  teamZ: { icon: Crown, label: 'Team Z', color: 'bg-amber-500' },
+  teamU: { icon: Shield, label: 'Team U', color: 'bg-ocean-500' },
+  teamY: { icon: Zap, label: 'Team Y', color: 'bg-tide-500' },
+  teamX: { icon: User, label: 'Team X', color: 'bg-purple-500' },
+  teamS: { icon: Star, label: 'Team S', color: 'bg-pink-500' },
+  teamA: { icon: Star, label: 'Team A', color: 'bg-gray-500' },
 };
 
 export default function CrewSection() {
@@ -43,7 +45,7 @@ export default function CrewSection() {
           </div>
           <div className="flex items-center gap-2">
             <Filter className="w-4 h-4 text-white/30" />
-            {['all', 'leader', 'officer', 'member', 'recruit'].map((r) => (
+            {['all', 'teamZ', 'teamU', 'teamY', 'teamX', 'teamS', 'teamA'].map((r) => (
               <button
                 key={r}
                 onClick={() => setFilter(r)}
@@ -53,7 +55,7 @@ export default function CrewSection() {
                     : 'bg-white/5 text-white/60 hover:text-white hover:bg-white/10'
                 }`}
               >
-                {r}
+                {r === 'all' ? 'All' : r}
               </button>
             ))}
           </div>
