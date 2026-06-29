@@ -81,13 +81,4 @@ export const crewMembers: CrewMember[] = [
     fruit: 'Bomb',
     status: 'rising',
   },
-  {
-    id: '9',
-    name: 'VihaanVP',
-    rank: 'officer',
-    role: 'Developer',
-    bounty: '67M',
-    fruit: 'Kitsune',
-    status: 'legendary',
-  },
 ];
