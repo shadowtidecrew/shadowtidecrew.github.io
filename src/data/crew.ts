@@ -1,7 +1,7 @@
 export interface CrewMember {
   id: string;
   name: string;
-  rank: 'leader' | 'officer' | 'member' | 'recruit';
+  rank: 'Team Z' | 'Team U' | 'Team Y' | 'Team X';
   role: string;
   bounty: string;
   fruit: string;
@@ -12,7 +12,7 @@ export const crewMembers: CrewMember[] = [
   {
     id: '1',
     name: 'CaptainShadow',
-    rank: 'leader',
+    rank: 'Team Z',
     role: 'Crew Leader & Founder',
     bounty: '30M',
     fruit: 'Dark-Dark',
@@ -21,7 +21,7 @@ export const crewMembers: CrewMember[] = [
   {
     id: '2',
     name: 'TideHunter',
-    rank: 'officer',
+    rank: 'Team U',
     role: 'PvP Commander',
     bounty: '25M',
     fruit: 'Light-Light',
@@ -30,7 +30,7 @@ export const crewMembers: CrewMember[] = [
   {
     id: '3',
     name: 'WaveBreaker',
-    rank: 'officer',
+    rank: 'Team U',
     role: 'Raid Coordinator',
     bounty: '22M',
     fruit: 'Magma',
@@ -39,7 +39,7 @@ export const crewMembers: CrewMember[] = [
   {
     id: '4',
     name: 'StormRider',
-    rank: 'member',
+    rank: 'Team Y',
     role: 'Sea Event Specialist',
     bounty: '18M',
     fruit: 'Dough',
@@ -48,7 +48,7 @@ export const crewMembers: CrewMember[] = [
   {
     id: '5',
     name: 'AbyssWalker',
-    rank: 'member',
+    rank: 'Team Y',
     role: 'Bounty Hunter',
     bounty: '15M',
     fruit: 'Venom',
@@ -57,7 +57,7 @@ export const crewMembers: CrewMember[] = [
   {
     id: '6',
     name: 'CurrentSurfer',
-    rank: 'member',
+    rank: 'Team X',
     role: 'Support & Healer',
     bounty: '12M',
     fruit: 'Flame',
@@ -66,7 +66,7 @@ export const crewMembers: CrewMember[] = [
   {
     id: '7',
     name: 'DepthDiver',
-    rank: 'recruit',
+    rank: 'Team X',
     role: 'Grinder',
     bounty: '5M',
     fruit: 'Ice',
@@ -75,7 +75,7 @@ export const crewMembers: CrewMember[] = [
   {
     id: '8',
     name: 'FoamBurst',
-    rank: 'recruit',
+    rank: 'Team X',
     role: 'Trainee',
     bounty: '3M',
     fruit: 'Bomb',
