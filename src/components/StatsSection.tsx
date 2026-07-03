@@ -125,7 +125,6 @@ export default function StatsSection() {
               <div className="relative grid grid-cols-2 gap-4">
                 {[
                   { label: 'Total Bounty', value: '800M+' },
-                  { label: 'Mythical Fruits', value: '15' },
                   { label: 'Awakenings', value: '25+' },
                   { label: 'Crew Wars Won', value: '12' },
                 ].map((item) => (
