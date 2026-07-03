@@ -126,6 +126,7 @@ export default function StatsSection() {
                 {[
                   { label: 'Total Bounty', value: '800M+' },
                   { label: 'Awakenings', value: '25+' },
+                  { label: 'Discord members', value: '200+' },
                   { label: 'Crew Wars Won', value: '12' },
                 ].map((item) => (
                   <div key={item.label} className="glass-card p-4 text-center">
