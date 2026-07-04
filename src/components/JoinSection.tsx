@@ -60,8 +60,6 @@ export default function JoinSection() {
         }],
       };
 
-      console.log('Sending to Discord webhook:', JSON.stringify(payload, null, 2));
-
       const response = await fetch(config.discord.webhookUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
