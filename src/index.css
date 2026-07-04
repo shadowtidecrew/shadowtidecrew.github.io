@@ -13,15 +13,27 @@ body {
   overflow-x: hidden;
 }
 
+/* Wave Animation Background */
+.ocean-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: linear-gradient(180deg, #020617 0%, #2e1065 40%, #3f0f5c 100%);
+}
+
 .wave {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 400%;
-  height: 200px;
+  width: 200%;
+  height: 100px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,60 C150,120 350,0 600,60 C850,120 1050,0 1200,60 L1200,120 L0,120 Z' fill='rgba(147,51,234,0.1)'/%3E%3C/svg%3E");
   background-size: 50% 100%;
-  animation: wave 5s linear infinite;
+  animation: wave 10s linear infinite;
 }
 
 .wave-2 {
@@ -41,6 +53,21 @@ body {
 @keyframes wave {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+/* Floating particles */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(147, 51, 234, 0.4);
+  border-radius: 50%;
+  animation: float-particle 8s ease-in-out infinite;
+}
+
+@keyframes float-particle {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+  50% { transform: translateY(-30px) translateX(10px); opacity: 0.8; }
 }
 
 /* Glass card effect */
@@ -76,6 +103,23 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #581c87;
+}
+
+/* Rank badge colors */
+.rank-leader {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+}
+.rank-officer {
+  background: linear-gradient(135deg, #9333ea 0%, #7e22ce 100%);
+  box-shadow: 0 0 15px rgba(147, 51, 234, 0.4);
+}
+.rank-member {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+.rank-recruit {
+  background: linear-gradient(135deg, #64748b 0%, #475569 100%);
 }
 
 /* Button shine */
