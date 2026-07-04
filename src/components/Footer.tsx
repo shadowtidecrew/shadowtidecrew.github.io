@@ -1,13 +1,25 @@
+import { useState } from 'react';
 import { Anchor, Heart, Waves, MessageSquare } from 'lucide-react';
 
 export default function Footer() {
+  const [logoError, setLogoError] = useState(false);
+
   return (
     <footer className="relative py-16 px-6 border-t border-ocean-500/10">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center text-center">
-          <div className="w-14 h-14 rounded-full bg-gradient-to-br from-ocean-500 to-tide-600 flex items-center justify-center mb-6">
-            <Anchor className="w-7 h-7 text-white" />
-          </div>
+          {logoError ? (
+            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-ocean-500 to-tide-600 flex items-center justify-center mb-6">
+              <Anchor className="w-7 h-7 text-white" />
+            </div>
+          ) : (
+            <img
+              src="/logo.png"
+              alt="Shadow Tide Crew"
+              className="w-14 h-14 rounded-full object-cover mb-6"
+              onError={() => setLogoError(true)}
+            />
+          )}
 
           <h3 className="font-display text-2xl font-bold text-white mb-2">
             Shadow Tide Crew

@@ -1,8 +1,9 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Shield, Swords, Target, Sparkles } from 'lucide-react';
 
 export default function AboutSection() {
   const sectionRef = useRef<HTMLElement>(null);
+  const [anchorError, setAnchorError] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -112,7 +113,18 @@ export default function AboutSection() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-ocean-500/10 to-tide-500/10 rounded-xl blur-xl" />
               <div className="relative glass-card p-6 text-center">
-                <div className="text-6xl mb-4">⚓</div>
+                <div className="mb-4 flex justify-center">
+                  {anchorError ? (
+                    <span className="text-6xl">⚓</span>
+                  ) : (
+                    <img
+                      src="/logo.png"
+                      alt=""
+                      className="w-14 h-14 rounded-full object-cover"
+                      onError={() => setAnchorError(true)}
+                    />
+                  )}
+                </div>
                 <p className="font-display text-lg text-white italic">
                   "The tide rises together. Sink alone, or swim with the crew."
                 </p>

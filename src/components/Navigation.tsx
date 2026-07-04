@@ -3,6 +3,7 @@ import { Anchor, Menu, X, MessageSquare } from 'lucide-react';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [logoError, setLogoError] = useState(false);
 
   const navLinks = [
     { name: 'Home', href: '#home' },
@@ -19,9 +20,18 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-ocean-500 to-tide-600 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Anchor className="w-5 h-5 text-white" />
-            </div>
+            {logoError ? (
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-ocean-500 to-tide-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Anchor className="w-5 h-5 text-white" />
+              </div>
+            ) : (
+              <img
+                src="/logo.png"
+                alt="Shadow Tide Crew"
+                className="w-10 h-10 rounded-full object-cover group-hover:scale-110 transition-transform"
+                onError={() => setLogoError(true)}
+              />
+            )}
             <span className="font-display text-xl font-bold text-white tracking-wider">
               STC
             </span>
