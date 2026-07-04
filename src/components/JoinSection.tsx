@@ -60,6 +60,8 @@ export default function JoinSection() {
         }],
       };
 
+      console.log('Sending to Discord webhook:', JSON.stringify(payload, null, 2));
+
       const response = await fetch(config.discord.webhookUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -107,12 +109,12 @@ export default function JoinSection() {
                 href="https://discord.gg/Xd2Cmj28j5"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#5865F2]/20 hover:bg-[#5865F2]/40 border border-[#5865F2]/30 hover:border-[#5865F2]/60 text-white rounded-xl font-medium transition-all mb-6"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#5865F2]/20 hover:bg-[#5865F2]/40 border border-[#5865F2]/30 hover:border-[#5865F2]/60 text-white rounded-xl font-medium transition-all"
               >
                 <MessageSquare className="w-5 h-5" />
                 Join Our Discord
               </a>
-              <p className="text-ocean-400 text-sm">
+              <p className="text-ocean-400 text-sm mt-6">
                 If the Discord Server isn't joined within 24 Hours, then the application will automatically be rejected.
               </p>
             </div>
@@ -211,7 +213,7 @@ export default function JoinSection() {
               <button
                 type="submit"
                 disabled={status === 'submitting'}
-                className="w-full px-8 py-4 bg-gradient-to-r from-ocean-500 to-tide-500 hover:from-ocean-400 hover:to-tide-400 text-white rounded-xl font-semibold transition-all shadow-lg shadow-ocean-500/20 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full px-8 py-4 bg-gradient-to-r from-ocean-500 to-tide-500 hover:from-ocean-400 hover:to-tide-400 text-white rounded-xl font-semibold transition-all shadow-lg shadow-ocean-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 <Send className="w-5 h-5" />
                 {status === 'submitting' ? 'Submitting...' : 'Submit Application'}
