@@ -1,5 +1,6 @@
-import { Crown, Shield, Star, Zap, Flame, Gem } from 'lucide-react';
-import { crewMembers } from '../data/crew';
+import { useState } from 'react';
+import { Crown, Shield, Star, Zap, Flame, Gem, Search, Filter } from 'lucide-react';
+import { crewMembers as staticCrewMembers } from '../data/crew';
 
 const rankConfig = {
   teamZ: { icon: Crown, label: 'Team Z', color: 'bg-amber-500' },
@@ -11,6 +12,16 @@ const rankConfig = {
 };
 
 export default function CrewSection() {
+  const [filter, setFilter] = useState<string>('all');
+  const [search, setSearch] = useState('');
+
+  const filtered = staticCrewMembers.filter((m) => {
+    const matchesFilter = filter === 'all' || m.rank === filter;
+    const matchesSearch = m.name.toLowerCase().includes(search.toLowerCase()) ||
+      m.fruit.toLowerCase().includes(search.toLowerCase());
+    return matchesFilter && matchesSearch;
+  });
+
   return (
     <section id="crew" className="py-20 px-6 relative">
       <div className="max-w-6xl mx-auto">
@@ -21,8 +32,40 @@ export default function CrewSection() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {crewMembers.map((member) => {
+        <div className="flex flex-col md:flex-row gap-4 mb-8">
+          <div className="relative flex-1">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
+            <input
+              type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Search by name or fruit..."
+              className="w-full pl-11 pr-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-ocean-400 transition-colors"
+            />
+          </div>
+          <div className="flex items-center gap-2">
+            <Filter className="w-4 h-4 text-white/30" />
+            {['all', 'teamZ', 'teamU', 'teamY', 'teamX', 'teamS', 'teamA'].map((r) => (
+              <button
+                key={r}
+                onClick={() => setFilter(r)}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors capitalize ${
+                  filter === r
+                    ? 'bg-ocean-500 text-white'
+                    : 'bg-white/5 text-white/60 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                {r === 'all' ? 'All' : r}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {filtered.length === 0 ? (
+          <div className="text-center py-20 text-ocean-300">No crew members match your search.</div>
+        ) : (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {filtered.map((member) => {
               const rank = rankConfig[member.rank];
               const RankIcon = rank.icon;
               return (
@@ -58,6 +101,7 @@ export default function CrewSection() {
               );
             })}
           </div>
+        )}
       </div>
     </section>
   );
