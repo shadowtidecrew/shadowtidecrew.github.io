@@ -18,7 +18,7 @@ export default function CrewSection() {
   const filtered = staticCrewMembers.filter((m) => {
     const matchesFilter = filter === 'all' || m.rank === filter;
     const matchesSearch = m.name.toLowerCase().includes(search.toLowerCase()) ||
-      m.fruit.toLowerCase().includes(search.toLowerCase());
+      m.build.toLowerCase().includes(search.toLowerCase());
     return matchesFilter && matchesSearch;
   });
 
@@ -94,7 +94,7 @@ export default function CrewSection() {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-white/50">Build</span>
-                      <span className="text-white font-medium">{member.fruit}</span>
+                      <span className="text-white font-medium">{member.build}</span>
                     </div>
                   </div>
                 </div>
