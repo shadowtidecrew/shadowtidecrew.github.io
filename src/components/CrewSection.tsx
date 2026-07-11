@@ -39,7 +39,7 @@ export default function CrewSection() {
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search by name or fruit..."
+              placeholder="Search by name or build..."
               className="w-full pl-11 pr-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-ocean-400 transition-colors"
             />
           </div>
@@ -93,7 +93,7 @@ export default function CrewSection() {
                       <span className="text-white font-medium">{member.bounty}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-white/50">Fruit</span>
+                      <span className="text-white/50">Build</span>
                       <span className="text-white font-medium">{member.fruit}</span>
                     </div>
                   </div>
